@@ -1,0 +1,32 @@
+<p>comparisions works!</p>
+
+<h2>Line Chart</h2>
+<div>
+    <select (change)="onChangeCompany($event.target.value)">
+        <option>Select Company</option>
+        <option *ngFor="let companyCode of companyCodes">{{companyCode}}</option>
+    </select>
+  </div>
+  
+<div style="display: block;" *ngIf="selectedCompany !=null">
+    <canvas baseChart width="400" height="400"
+      [datasets]="line.lineChartData"
+      [labels]="line.lineChartLabels"
+      [chartType]="line.lineChartType"
+      >
+    </canvas>
+  </div>
+
+
+<h2>Bar Chart</h2>
+<div style="display: block;">
+    <canvas baseChart 
+      [datasets]="bar.data"
+      [labels]="bar.labels"
+
+      [chartType]="bar.type">
+    </canvas>
+  </div>
+  
+  
+  

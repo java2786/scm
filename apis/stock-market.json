@@ -1,0 +1,454 @@
+{
+  "login": {"success": true, "data": {}, "message": ""},
+  "stock_exchanges": [
+    {
+      "id": 1,
+      "stockExchange": "bse",
+      "brief": "bombay stock exchange",
+      "contactAddress": "india",
+      "remarks": ""
+    },
+    {
+      "id": 2,
+      "stockExchange": "nse",
+      "brief": "national stock exchange of india ltd.",
+      "contactAddress": "mumbai, india",
+      "remarks": ""
+    },
+    {
+      "id": 3,
+      "stockExchange": "nyse",
+      "brief": "new york stock exchange",
+      "contactAddress": "11 wall street, lower manhattan, new york city, new york.",
+      "remarks": ""
+    }
+  ],
+  "sectors": [
+    {
+      "id": 1,
+      "sectorName": "banks",
+      "sectorCode": "banks",
+      "brief": "public sector"
+    },
+    {
+      "id": 2,
+      "sectorName": "finance",
+      "sectorCode": "finance",
+      "brief": "investments"
+    },
+    {
+      "id": 3,
+      "sectorName": "telecom",
+      "sectorCode": "telecom",
+      "brief": "telecom"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "companyName": "sbi",
+      "turnover": 12345,
+      "ceo": "bhasker",
+      "boardDirectors": "amit, aman, kurlaj",
+      "stockExchange": "bse",
+      "sectorCode": "banks",
+      "brief": "public sector",
+      "stockCode": ""
+    },
+    {
+      "id": 2,
+      "companyName": "Muthoot Finance",
+      "turnover": 12345,
+      "ceo": "bhasker",
+      "boardDirectors": "amit, aman, kurlaj",
+      "brief": "some ",
+      "sectorCode": "Finance",
+      "stockExchange": "bse"
+    },
+    {
+      "id": 3,
+      "companyName": "bharti airtel ltd",
+      "turnover": 12345,
+      "ceo": "bhasker",
+      "boardDirectors": "amit, aman, kurlaj",
+      "stockExchange": "nse",
+      "sectorCode": "telecom",
+      "brief": "some description",
+      "stockCode": ""
+    },
+    {
+      "id": 4,
+      "companyName": "hdfc",
+      "turnover": 12345,
+      "ceo": "bhasker",
+      "boardDirectors": "amit, aman, kurlaj",
+      "stockExchange": "bse",
+      "sectorCode": "banks",
+      "brief": "private sector",
+      "stockCode": ""
+    }
+  ],
+  "stock-prices": [
+    {
+      "id": "1",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "12",
+      "date": "2020-07-09",
+      "time": "10:00"
+    },
+    {
+      "id": "2",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "10",
+      "date": "2020-07-10",
+      "time": "10:00"
+    },
+    {
+      "id": "3",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "125.34",
+      "date": "2020-07-11",
+      "time": "10:00"
+    },
+    {
+      "id": "4",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "136.14",
+      "date": "2020-07-12",
+      "time": "10:00"
+    },
+    {
+      "id": "5",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "111.11",
+      "date": "2020-07-13",
+      "time": "10:00"
+    },
+    {
+      "id": "6",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "132.32",
+      "date": "2020-07-14",
+      "time": "10:00"
+    },
+    {
+      "id": "7",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "122.33",
+      "date": "2020-07-15",
+      "time": "10:00"
+    },
+    {
+      "id": "8",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "144.22",
+      "date": "2020-07-16",
+      "time": "10:00"
+    },
+    {
+      "id": "9",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "99.22",
+      "date": "2020-07-17",
+      "time": "10:00"
+    },
+    {
+      "id": "10",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "103.22",
+      "date": "2020-07-18",
+      "time": "10:00"
+    },
+    {
+      "id": "11",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "128.24",
+      "date": "2020-07-19",
+      "time": "10:00"
+    },
+    {
+      "id": "12",
+      "companyCode": "sbi",
+      "stockExchange": "bse",
+      "currentPrice": "142.15",
+      "date": "2020-07-20",
+      "time": "10:00"
+    },
+    {
+      "id": "13",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "10",
+      "date": "2020-07-09",
+      "time": "10:00"
+    },
+    {
+      "id": "14",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "9",
+      "date": "2020-07-10",
+      "time": "10:00"
+    },
+    {
+      "id": "15",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "124.13",
+      "date": "2020-07-11",
+      "time": "10:00"
+    },
+    {
+      "id": "16",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "127.24",
+      "date": "2020-07-12",
+      "time": "10:00"
+    },
+    {
+      "id": "17",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "149.23",
+      "date": "2020-07-13",
+      "time": "10:00"
+    },
+    {
+      "id": "18",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "137.29",
+      "date": "2020-07-14",
+      "time": "10:00"
+    },
+    {
+      "id": "19",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "149.14",
+      "date": "2020-07-15",
+      "time": "10:00"
+    },
+    {
+      "id": "20",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "157.19",
+      "date": "2020-07-16",
+      "time": "10:00"
+    },
+    {
+      "id": "21",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "168.68",
+      "date": "2020-07-17",
+      "time": "10:00"
+    },
+    {
+      "id": "22",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "143.13",
+      "date": "2020-07-18",
+      "time": "10:00"
+    },
+    {
+      "id": "23",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "153.26",
+      "date": "2020-07-19",
+      "time": "10:00"
+    },
+    {
+      "id": "24",
+      "companyCode": "hdfc",
+      "stockExchange": "bse",
+      "currentPrice": "149.3",
+      "date": "2020-07-20",
+      "time": "10:00"
+    },
+    {
+      "id": "25",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "131.39",
+      "date": "2020-07-08",
+      "time": "10:00"
+    },
+    {
+      "id": "26",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "10",
+      "date": "2020-07-09",
+      "time": "10:00"
+    },
+    {
+      "id": "27",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "8",
+      "date": "2020-07-10",
+      "time": "10:00"
+    },
+    {
+      "id": "28",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "111.11",
+      "date": "2020-07-11",
+      "time": "10:00"
+    },
+    {
+      "id": "29",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "132.32",
+      "date": "2020-07-12",
+      "time": "10:00"
+    },
+    {
+      "id": "30",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "128.24",
+      "date": "2020-07-13",
+      "time": "10:00"
+    },
+    {
+      "id": "31",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "142.15",
+      "date": "2020-07-14",
+      "time": "10:00"
+    },
+    {
+      "id": "32",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "127.24",
+      "date": "2020-07-15",
+      "time": "10:00"
+    },
+    {
+      "id": "33",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "149.23",
+      "date": "2020-07-16",
+      "time": "10:00"
+    },
+    {
+      "id": "34",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "168.68",
+      "date": "2020-07-17",
+      "time": "10:00"
+    },
+    {
+      "id": "35",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "153.26",
+      "date": "2020-07-18",
+      "time": "10:00"
+    },
+    {
+      "id": "36",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "149.3",
+      "date": "2020-07-19",
+      "time": "10:00"
+    },
+    {
+      "id": "37",
+      "companyCode": "bharti airlet ltd",
+      "stockExchange": "bse",
+      "currentPrice": "157.19",
+      "date": "2020-07-20",
+      "time": "10:00"
+    }
+  ],
+  "stock-prices-by-date": [
+    {
+      "companyCode": "sbi",
+      "result": [
+        {
+          "id": "1",
+          "companyCode": "sbi",
+          "stockExchange": "bse",
+          "currentPrice": "123.11",
+          "date": "2020-07-01",
+          "time": "10:00"
+        },
+        {
+          "id": "2",
+          "companyCode": "sbi",
+          "stockExchange": "bse",
+          "currentPrice": "126.32",
+          "date": "2020-07-10",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "companyCode": "bharti airtel ltd",
+      "result": [
+        {
+          "id": "32",
+          "companyCode": "bharti airlet ltd",
+          "stockExchange": "bse",
+          "currentPrice": "127.24",
+          "date": "2020-07-15",
+          "time": "10:00"
+        },
+        {
+          "id": "33",
+          "companyCode": "bharti airlet ltd",
+          "stockExchange": "bse",
+          "currentPrice": "149.23",
+          "date": "2020-07-16",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "companyCode": "hdfc",
+      "result": [
+        {
+          "id": "17",
+          "companyCode": "hdfc",
+          "stockExchange": "bse",
+          "currentPrice": "149.23",
+          "date": "2020-07-13",
+          "time": "10:00"
+        },
+        {
+          "id": "18",
+          "companyCode": "hdfc",
+          "stockExchange": "bse",
+          "currentPrice": "137.29",
+          "date": "2020-07-14",
+          "time": "10:00"
+        }
+      ]
+    }
+  ]
+}

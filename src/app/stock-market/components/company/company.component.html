@@ -1,0 +1,154 @@
+<h3>Company</h3>
+
+
+
+<div class="container">
+    <form [formGroup]="companyForm" (ngSubmit)="submitForm()">
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-name">Company Name:</label>
+            </div>
+            <div class="col-6">
+                <input type="text" formControlName="companyName" class="form-control" id="input-company-name"
+                    placeholder="Name" />
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-ceo">CEO Name:</label>
+            </div>
+            <div class="col-6">
+                <input type="text" formControlName="ceo" class="form-control" id="input-company-ceo"
+                    placeholder="CEO Name" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-turnover">Turnover:</label>
+            </div>
+            <div class="col-6">
+                <input type="number" formControlName="turnover" class="form-control" id="input-company-turnover"
+                    placeholder="Turnover" />
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-sector">Sector Code:</label>
+            </div>
+            <div class="col-6">
+                <input  formControlName="sectorCode" class="form-control" id="input-company-sector-code"
+                    placeholder="Sector Code" />
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-brief">Brief Description:</label>
+            </div>
+            <div class="col-6">
+                <input type="text" formControlName="brief" class="form-control" id="input-company-brief"
+                    placeholder="Brief" />
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-board-directors">Board Member:</label>
+            </div>
+            <div class="col-6">
+                <input  formControlName="boardDirectors" class="form-control" id="input-company-board-directors"
+                    placeholder="Board Directors" />
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-2">
+                <label for="input-company-listed-exchange">Exchanges:</label>
+            </div>
+            <div class="col-6">
+                <select class="custom-select" id="input-company-sector" formControlName="stockExchange">
+                    <option [selected] value="">Choose...</option>
+                    <option *ngFor="let stockExchange of stockExchanges;" [value]="stockExchange.stockExchange">
+                        {{stockExchange.stockExchange}} - {{stockExchange.brief}}</option>
+                </select>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-2">
+      
+
+                <input type="submit" class="btn btn-success" [disabled]="companyForm.invalid" value="Save" />
+
+            </div>
+            <div class="col-2">
+                <button type="reset" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+<hr/>
+<hr/>
+
+
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">CEO</th>
+                <th scope="col">Turnover</th>
+                <th scope="col">Board Directors</th>
+                <th scope="col">Stock Exchange</th>
+                <th scope="col">Sector Code</th>
+                <th scope="col">Stock Code</th>
+                <th scope="col">Brief</th>
+                <th scope="col">Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let company of companies;let i=index">
+                <th scope="row">{{company.id}}</th>
+                <td>{{company.companyName}}</td>
+                <td>{{company.ceo}}</td>
+                <td>{{company.turnover}}</td>
+                <td>{{company.boardDirectors}}</td>
+                <td>{{company.stockExchange}}</td>
+                <td>{{company.sectorCode}}</td>
+                <td>{{company.stockCode}}</td>
+                <td>{{company.brief}}</td>
+                <!-- <td><a [routerLink]='["/", "stock-market", "stock-data", "company", company.id]'>Edit</a></td> -->
+                <td><button class="btn btn-sm btn-info" (click)="editButtonClicked(company)">Edit</button></td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+</div>

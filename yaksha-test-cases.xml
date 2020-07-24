@@ -1,0 +1,250 @@
+<test-cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>loginguardShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>exceluploadercomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>userserviceBoundaryShouldBeCreated</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Exception</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>userserviceExceptionShouldContainInvalidUser</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Functional</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>userserviceBusinessShouldGetUserToLogin</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>stockdatacomponentBoundaryShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Functional</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>companyserviceBusinessShouldGetAjaxDataFromApis</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>companyserviceBoundaryShouldBeCreated</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>comparisionscomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>appcomponentBoundaryShouldContainApp-footerElement</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>appcomponentBoundaryShouldCreateTheApp</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>appcomponentBoundaryShouldContainRouter-outletElement</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>appcomponentBoundaryShouldContainApp-headerElement</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>homecomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>stockindicescomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>companycomponentBoundaryShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>homecomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentBoundaryShouldNotValidateEmptyEmail</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentBoundaryShouldBeCreateted</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Functional</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentBusinessShouldGetLoginWithValidData</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Functional</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentBusinessShouldValidatePasswordFeild</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Functional</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentBusinessShouldValidateEmailFeild</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Exception</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentExceptionShouldContainInvalidFormWhenEmpty</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Exception</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>logincomponentExceptionShouldFailEmailValidationWithInvalidEmail-id'abc'</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>stockpricecomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>stockexchangeserviceShouldBeCreated</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>stockpriceserviceShouldBeCreated</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>footercomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>registercomponentShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Should</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>sectorserviceShouldBeCreated</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+  <cases xmlns:java="http://java.sun.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:com.assessment.data.TestCase">
+    <test-case-type>Boundary</test-case-type>
+    <expected-ouput>true</expected-ouput>
+    <name>headercomponentBoundaryShouldCreate</name>
+    <weight>2</weight>
+    <mandatory>true</mandatory>
+    <desc>na</desc>
+  </cases>
+</test-cases>
