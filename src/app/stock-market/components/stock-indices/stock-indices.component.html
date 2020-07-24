@@ -1,211 +1,217 @@
 <p>stock-indices works!</p>
 <div>
-  <input (change)="changeSelectedDate($event.target.value)" placeholder="YYYY-MM-dd" value="2020-07-12"/>
+  <!-- <input (change)="changeSelectedDate($event.target.value)" placeholder="YYYY-MM-dd" value="2020-07-12" /> -->
+  <input (change)="changeSelectedDate($event.target.value)" placeholder="YYYY-MM-dd"  />
 </div>
 
 <ul>
-    <li>
-      <div>
-<h2>Price Weighting</h2>
-  <!--   <select (change)="changeSelectedCompany($event.target.value)">
-      <option>Select Company</option>
-      <option *ngFor="let company of companyNames" >{{company}}</option>
-    </select>
- -->
-<!-- <select (change)="changeSelectedDate($event.target.value)"> -->
+  <li>
+    <div>
+      <h2>Price Weighting</h2>
 
-  
-  <table class="table" *ngIf="stockData.length > 0">
-    <thead>
-      <tr>
-        <th scope="col">Stock</th>
-        <th scope="col">Price on day 1</th>
-        <th scope="col">Price on day 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let stockPrice of stockData">
-        <td scope="row">{{stockPrice.companyCode}}</td>
-        <td>{{stockPrice.price_1}}</td>
-        <td>{{stockPrice.price_2}}</td>
-      </tr>
-    
-      <tr>
-        <th>Total</th>
-        <td>{{weightingData.priceTotal_1}}</td>
-        <td>{{weightingData.priceTotal_2}}</td>
-      </tr>
-      <tr>
-        <th>Average Price</th>
-        <td>{{weightingData.priceTotal_1/stockData.length}}</td>
-        <td>{{weightingData.priceTotal_2/stockData.length}}</td>
-      </tr>
-      <tr>
-        <th>Average of day 2/Average of day 1</th>
-        <td colspan="2">{{((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000}}</td>
-      </tr>
-      <tr>
-        <td colspan="3">Index on day 1 is 1000 and on day 2 is {{((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000}}, hence market is {{Math.abs((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)}} points <span *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)>0">higher</span><span *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)<0">lower</span><span *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)==0">same</span> on day 2 as of day 1.</td>
-      </tr>
-    </tbody>
-  </table>
-      </div>
-    </li>
-    <li>
-      <div>
-<h2>Equal Weighting</h2>
-  <!--   <select (change)="changeSelectedCompany($event.target.value)">
-      <option>Select Company</option>
-      <option *ngFor="let company of companyNames" >{{company}}</option>
-    </select>
- -->
-<!-- <select (change)="changeSelectedDate($event.target.value)"> -->
-
-  
-  <table class="table" *ngIf="stockData.length > 0">
-    <thead>
-      <tr>
-        <th scope="col">Stock</th>
-        <th scope="col">Price on day 1</th>
-        <th scope="col">Price on day 2</th>
-        <th scope="col">Price relative(Day2/Day1)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let stockPrice of stockData">
-        <td scope="row">{{stockPrice.companyCode}}</td>
-        <td>{{stockPrice.price_1}}</td>
-        <td>{{stockPrice.price_2}}</td>
-        <td>{{stockPrice.price_2/stockPrice.price_1}}</td>
-      </tr>
-    
-      <tr>
-        <th>Total</th>
-        <td colspan="3">{{weightingData.relativeTotal}}</td>
-      </tr>
-      <tr>
-        <th>Sum of price relatives/number of stocks * 1000</th>
-        <td colspan="3">{{(weightingData.relativeTotal/stockData.length)*1000}}</td>
-      </tr>
-      <tr>
-        <td>Index on day 1 is 1000 and on day 2 is {{(weightingData.relativeTotal/stockData.length)*1000}}, hence market is {{((weightingData.relativeTotal/stockData.length)*1000)-1000}} points <span *ngIf="((weightingData.relativeTotal/stockData.length)*1000)-1000 > 0">higher</span><span *ngIf="((weightingData.relativeTotal/stockData.length)*1000)-1000 < 0">lower</span><span *ngIf="((weightingData.relativeTotal/stockData.length)*1000)-1000 == 0">same</span> on day 2 as of day 1.</td>
-      </tr>
-          <!--
-      <tr>
-        <th>Average Price</th>
-        <td>{{weightingData.priceTotal_1/stockData.length}}</td>
-        <td>{{weightingData.priceTotal_2/stockData.length}}</td>
-      </tr>
-      <tr>
-        <th>Average of day 2/Average of day 1</th>
-        <td colspan="2">{{((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000}}</td>
-      </tr>
-      <tr>
-        <td colspan="3">Index on day 1 is 1000 and on day 2 is {{((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000}}, hence market is {{(((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000}} points <span *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)>0">higher</span><span *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)<0">lower</span><span *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)==0">same</span> on day 2 as of day 1.</td>
-      </tr> -->
-    </tbody>
-  </table>
+      <h5 *ngIf="stockData.length <= 0">Price Weighting data not found</h5>
 
 
-      </div>
-    </li>
-    <li>
-      <div>
-        
-        <h2>Value / Capitalization Weighting</h2>
+      <table class="table" *ngIf="stockData.length > 0">
+        <thead>
+          <tr>
+            <th scope="col">Stock</th>
+            <th scope="col">Price on day 1</th>
+            <th scope="col">Price on day 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stockPrice of stockData">
+            <td scope="row">{{stockPrice.companyCode}}</td>
+            <td>{{stockPrice.price_1}}</td>
+            <td>{{stockPrice.price_2}}</td>
+          </tr>
+
+          <tr>
+            <th>Total</th>
+            <td>{{weightingData.priceTotal_1}}</td>
+            <td>{{weightingData.priceTotal_2}}</td>
+          </tr>
+          <tr>
+            <th>Average Price</th>
+            <td>{{weightingData.priceTotal_1/stockData.length}}</td>
+            <td>{{weightingData.priceTotal_2/stockData.length}}</td>
+          </tr>
+          <tr>
+            <th>Average of day 2/Average of day 1</th>
+            <td colspan="2">
+              {{((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000}}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">Index on day 1 is 1000 and on day 2 is
+              {{((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000}},
+              hence market is
+              {{Math.abs((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)}}
+              points <span
+                *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)>0">higher</span><span
+                *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)<0">lower</span><span
+                *ngIf="((((weightingData.priceTotal_2/stockData.length) / (weightingData.priceTotal_1/stockData.length))*1000)-1000)==0">same</span>
+              on day 2 as of day 1.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+  <li>
+    <div>
+      <h2>Equal Weighting</h2>
+
+      <h5 *ngIf="stockData.length <= 0">Equal Weighting data not found</h5>
+
+      <table class="table" *ngIf="stockData.length > 0">
+        <thead>
+          <tr>
+            <th scope="col">Stock</th>
+            <th scope="col">Price on day 1</th>
+            <th scope="col">Price on day 2</th>
+            <th scope="col">Price relative(Day2/Day1)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stockPrice of stockData">
+            <td scope="row">{{stockPrice.companyCode}}</td>
+            <td>{{stockPrice.price_1}}</td>
+            <td>{{stockPrice.price_2}}</td>
+            <td>{{stockPrice.price_2/stockPrice.price_1}}</td>
+          </tr>
+
+          <tr>
+            <th>Total</th>
+            <td colspan="3">{{weightingData.relativeTotal}}</td>
+          </tr>
+          <tr>
+            <th>Sum of price relatives/number of stocks * 1000</th>
+            <td colspan="3">{{(weightingData.relativeTotal/stockData.length)*1000}}</td>
+          </tr>
+          <tr>
+            <td>Index on day 1 is 1000 and on day 2 is {{(weightingData.relativeTotal/stockData.length)*1000}}, hence
+              market is {{((weightingData.relativeTotal/stockData.length)*1000)-1000}} points <span
+                *ngIf="((weightingData.relativeTotal/stockData.length)*1000)-1000 > 0">higher</span><span
+                *ngIf="((weightingData.relativeTotal/stockData.length)*1000)-1000 < 0">lower</span><span
+                *ngIf="((weightingData.relativeTotal/stockData.length)*1000)-1000 == 0">same</span> on day 2 as of day
+              1.</td>
+          </tr>
+        </tbody>
+      </table>
 
 
-         
-  <table class="table" *ngIf="stockData.length > 0">
-    <thead>
-      <tr>
-        <th scope="col">Stock</th>
-        
-        <th scope="col">Number of shares outstanding</th>
+    </div>
+  </li>
+  <li>
+    <div>
 
-        <th scope="col">Price on day 1</th>
-        <th scope="col">Number of shares * Price on day 1</th>
-
-        <th scope="col">Price on day 2</th>
-        <th scope="col">Number of shares * Price on day 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let stockPrice of stockData;let i = index;">
-        <td scope="row">{{stockPrice.companyCode}}</td>
-
-        <td>{{outstandingShares[i]}}</td>
-
-        <td>{{stockPrice.price_1}}</td>
-        <td>{{stockPrice.price_1 * outstandingShares[i]}}</td>
+      <h2>Value / Capitalization Weighting</h2>
 
 
-        <td>{{stockPrice.price_2}}</td>
-        <td>{{stockPrice.price_2 * outstandingShares[i]}}</td>
-      </tr>
-    
-      <tr>
-        <th>Total</th>
-        <td></td>
-        <td></td>
-        <td>{{weightingData.valueTotal_1}}</td>
-        <td></td>
-        <td>{{weightingData.valueTotal_2}}</td>
-      </tr>
-      <tr>
-        <th>(Product of shares and prices on day 2/Product of shares and prices on day 1)*1000</th>
-        <td colspan="5">{{(weightingData.valueTotal_2/weightingData.valueTotal_1)*1000}}</td>
-      </tr>
-      <tr>
-        <td>Index on day 1 is 1000 and on day 2 is {{(weightingData.valueTotal_2/weightingData.valueTotal_1)*1000}}, hence market is {{((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000}} points <span *ngIf="((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000 > 0">higher</span><span *ngIf="((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000 < 0">lower</span><span *ngIf="((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000 == 0">same</span> on day 2 as of day 1.</td>
-      </tr>
-    </tbody>
-  </table>
+      <h5 *ngIf="stockData.length <= 0">Capitalization Weighting data not found</h5>
+
+      <table class="table" *ngIf="stockData.length > 0">
+        <thead>
+          <tr>
+            <th scope="col">Stock</th>
+
+            <th scope="col">Number of shares outstanding</th>
+
+            <th scope="col">Price on day 1</th>
+            <th scope="col">Number of shares * Price on day 1</th>
+
+            <th scope="col">Price on day 2</th>
+            <th scope="col">Number of shares * Price on day 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stockPrice of stockData;let i = index;">
+            <td scope="row">{{stockPrice.companyCode}}</td>
+
+            <td>{{stockPrice.outstandingShares}}</td>
+
+            <td>{{stockPrice.price_1}}</td>
+            <td>{{stockPrice.price_1 * stockPrice.outstandingShares}}</td>
 
 
-      </div>
-    
-    </li>
-    <li>
-      <div>
+            <td>{{stockPrice.price_2}}</td>
+            <td>{{stockPrice.price_2 * stockPrice.outstandingShares}}</td>
+          </tr>
 
-        <h2>Geometric Mean</h2>
-
-
-         
-  <table class="table" *ngIf="stockData.length > 0">
-    <thead>
-      <tr>
-        <th scope="col">Stock</th>
-        <th scope="col">Price on day 1</th>
-        <th scope="col">Price on day 2</th>
-        <th scope="col">Price relative(Day2/Day1)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let stockPrice of stockData">
-        <td scope="row">{{stockPrice.companyCode}}</td>
-        <td>{{stockPrice.price_1}}</td>
-        <td>{{stockPrice.price_2}}</td>
-        <td>{{stockPrice.price_2/stockPrice.price_1}}</td>
-      </tr>
-    
-      <tr>
-        <th>Product of Price Relatives</th>
-        <td colspan="3">{{weightingData.productOfRelativePrices}}</td>
-      </tr>
-      <tr>
-        <th>3rd root of {{weightingData.productOfRelativePrices}}</th>
-        <td colspan="3">{{Math.pow(weightingData.productOfRelativePrices, 1/3)}}</td>
-      </tr>
-      <tr>
-        <td>Index on day 1 is 1000 and on day 2 is {{Math.pow(weightingData.productOfRelativePrices, 1/3)}}, hence market is {{(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000}} points <span *ngIf="(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000 > 0">higher</span><span *ngIf="(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000 < 0">lower</span><span *ngIf="(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000 == 0">same</span> on day 2 as of day 1.</td>
-      </tr>
-    </tbody>
-  </table>
+          <tr>
+            <th>Total</th>
+            <td></td>
+            <td></td>
+            <td>{{weightingData.valueTotal_1}}</td>
+            <td></td>
+            <td>{{weightingData.valueTotal_2}}</td>
+          </tr>
+          <tr>
+            <th>(Product of shares and prices on day 2/Product of shares and prices on day 1)*1000</th>
+            <td colspan="5">{{(weightingData.valueTotal_2/weightingData.valueTotal_1)*1000}}</td>
+          </tr>
+          <tr>
+            <td>Index on day 1 is 1000 and on day 2 is {{(weightingData.valueTotal_2/weightingData.valueTotal_1)*1000}},
+              hence market is {{((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000}} points <span
+                *ngIf="((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000 > 0">higher</span><span
+                *ngIf="((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000 < 0">lower</span><span
+                *ngIf="((weightingData.valueTotal_2/weightingData.valueTotal_1)*1000)-1000 == 0">same</span> on day 2 as
+              of day 1.</td>
+          </tr>
+        </tbody>
+      </table>
 
 
-      </div>
-    
-    </li>
+    </div>
+
+  </li>
+  <li>
+    <div>
+
+      <h2>Geometric Mean</h2>
+
+
+
+      <h5 *ngIf="stockData.length <= 0">Geometric Mean data not found</h5>
+      <table class="table" *ngIf="stockData.length > 0">
+        <thead>
+          <tr>
+            <th scope="col">Stock</th>
+            <th scope="col">Price on day 1</th>
+            <th scope="col">Price on day 2</th>
+            <th scope="col">Price relative(Day2/Day1)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stockPrice of stockData">
+            <td scope="row">{{stockPrice.companyCode}}</td>
+            <td>{{stockPrice.price_1}}</td>
+            <td>{{stockPrice.price_2}}</td>
+            <td>{{stockPrice.price_2/stockPrice.price_1}}</td>
+          </tr>
+
+          <tr>
+            <th>Product of Price Relatives</th>
+            <td colspan="3">{{weightingData.productOfRelativePrices}}</td>
+          </tr>
+          <tr>
+            <th>3rd root of {{weightingData.productOfRelativePrices}}</th>
+            <td colspan="3">{{Math.pow(weightingData.productOfRelativePrices, 1/3)}}</td>
+          </tr>
+          <tr>
+            <td>Index on day 1 is 1000 and on day 2 is {{Math.pow(weightingData.productOfRelativePrices, 1/3)}}, hence
+              market is {{(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000}} points <span
+                *ngIf="(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000 > 0">higher</span><span
+                *ngIf="(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000 < 0">lower</span><span
+                *ngIf="(Math.pow(weightingData.productOfRelativePrices, 1/3))-1000 == 0">same</span> on day 2 as of day
+              1.</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </li>
 </ul>

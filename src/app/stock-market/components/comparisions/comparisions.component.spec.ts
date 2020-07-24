@@ -27,7 +27,9 @@ describe('ComparisionsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  describe('boundary', ()=>{
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
+  })
 });

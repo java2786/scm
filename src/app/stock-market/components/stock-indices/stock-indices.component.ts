@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StockPriceService } from '../../services/stock-price.service';
 import { StockPrice } from '../../models/stock-price.model';
+import { CompanyService } from '../../services/company.service';
+import { Company } from '../../models/company.model';
 
 @Component({
   selector: 'app-stock-indices',
@@ -16,39 +18,13 @@ export class StockIndicesComponent implements OnInit {
   Math:Math = Math;
 
 
-  outstandingShares: number[] = [1000, 2000, 100000, 5000, 4000, 6200, 6000];
+  // outstandingShares: number[] = [1000, 2000, 100000, 5000, 4000, 6200, 6000];
+  // outstandingShares: number[] = [];
   
-  weightingData:any = {
-  //   priceTotal_1: 0,
-  //   priceTotal_2: 0,
-
-  //   relativeTotal: 0,
-
-  //   valueTotal_1: 0,
-  //   valueTotal_2: 0,
-
-  //   productOfRelativePrices: 1
-  }
-
-  // priceWeightingTotal:any = {
-  //   total_1: 0,
-  //   total_2: 0
-  // }
-  // equalWeightingData: any = {
-  //   relativeTotal: 0
-  // };
-
-  // valueWeighting: any = {
-  //   total_1: 0,
-  //   total_2: 0
-  // }
-
-  // geometricMean:any = {
-  //   productOfRelativePrices: 1
-  // }
+  weightingData:any = {  }
 
   stockPriceWeightingData: any[];
-  constructor(private stockPriceService: StockPriceService) {
+  constructor(private stockPriceService: StockPriceService, private companyService: CompanyService) {
     this.resetWeightingData();
    }
 
@@ -67,6 +43,17 @@ export class StockIndicesComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    // this.companyService.getAllCompanies()
+    // .subscribe((res:any)=>{
+    //   console.log(res);
+    //   // this.stockPrices = res;
+    //   this.outstandingShares = res.map((company:Company)=>company.outstandingShares)
+    //   console.log(this.outstandingShares);
+    // }, err=>{
+    //   console.log(err);
+    // })
+
 
     this.stockPriceService.getAllStockPrices()
     .subscribe((res:any)=>{
@@ -94,7 +81,7 @@ export class StockIndicesComponent implements OnInit {
       && 
       this.stockPrices[i-1].date == this.selectedDate_2
       ){
-        this.stockData.push({"companyCode": this.stockPrices[i].companyCode, "price_1": this.stockPrices[i].currentPrice, "price_2": this.stockPrices[i-1].currentPrice})
+        this.stockData.push({"companyCode": this.stockPrices[i].companyCode, "price_1": this.stockPrices[i].currentPrice, "price_2": this.stockPrices[i-1].currentPrice, "outstandingShares": this.stockPrices[i].outstandingShares})
       }
     }
     
@@ -105,12 +92,15 @@ export class StockIndicesComponent implements OnInit {
         this.weightingData.relativeTotal += this.stockData[i].price_2/this.stockData[i].price_1;
         this.weightingData.productOfRelativePrices *= this.stockData[i].price_2/this.stockData[i].price_1;
 
-        this.weightingData.valueTotal_1 += this.stockData[i].price_1 * this.outstandingShares[i];
-        this.weightingData.valueTotal_2 += this.stockData[i].price_2 * this.outstandingShares[i];
+        this.weightingData.valueTotal_1 += this.stockData[i].price_1 * this.stockData[i].outstandingShares;
+        this.weightingData.valueTotal_2 += this.stockData[i].price_2 * this.stockData[i].outstandingShares;
+
+
 
     }
 
     console.log(this.stockData);
+    console.log(this.weightingData);
 
   }
 

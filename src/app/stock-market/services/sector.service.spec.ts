@@ -7,12 +7,20 @@ import { RouterTestingModule } from '@angular/router/testing';
 describe('SectorService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
-      HttpClientTestingModule, 
+      HttpClientTestingModule,
       RouterTestingModule.withRoutes([])]
   }));
 
-  it('should be created', () => {
-    const service: SectorService = TestBed.get(SectorService);
-    expect(service).toBeTruthy();
+  describe('boundary', () => {
+
+    it('should be created', () => {
+      const service: SectorService = TestBed.get(SectorService);
+      expect(service).toBeTruthy();
+    });
+    it('should be created 2', () => {
+      const service: SectorService = TestBed.get(SectorService);
+      expect(service).toBeTruthy();
+    });
+
   });
 });

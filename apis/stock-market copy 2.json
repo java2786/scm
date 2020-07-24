@@ -1,0 +1,56 @@
+{
+  "login": {
+    "success": true,
+    "data": {},
+    "message": ""
+  },
+  "stock_exchanges": [
+    {
+      "id": 1,
+      "stockExchange": "bse",
+      "brief": "bombay stock exchange",
+      "contactAddress": "india",
+      "remarks": ""
+    },
+    {
+      "id": 2,
+      "stockExchange": "nse",
+      "brief": "national stock exchange of india ltd.",
+      "contactAddress": "mumbai, india",
+      "remarks": ""
+    },
+    {
+      "id": 3,
+      "stockExchange": "nyse",
+      "brief": "new york stock exchange",
+      "contactAddress": "11 wall street, lower manhattan, new york city, new york.",
+      "remarks": ""
+    }
+  ],
+  "sectors": [
+    {
+      "id": 1,
+      "sectorName": "banks",
+      "sectorCode": "banks",
+      "brief": "public sector"
+    },
+    {
+      "id": 2,
+      "sectorName": "finance",
+      "sectorCode": "finance",
+      "brief": "investments"
+    },
+    {
+      "id": 3,
+      "sectorName": "telecom",
+      "sectorCode": "telecom",
+      "brief": "telecom"
+    }
+  ],
+  "companies": [
+
+  ],
+  "stock-prices": [
+    
+  ]
+}

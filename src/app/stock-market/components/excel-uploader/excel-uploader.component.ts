@@ -16,6 +16,7 @@ export class ExcelUploaderComponent implements OnInit {
 
   first_worksheet: any;
 
+
   constructor(private companyService: CompanyService, private stockPriceService: StockPriceService) { }
   ngOnInit() { }
 
@@ -45,6 +46,29 @@ export class ExcelUploaderComponent implements OnInit {
   readFirstSheet(dataType) {
     this.readAsJson(this.first_worksheet, (jsonData: Company[]) => {
       console.log(jsonData);
+      // post data
+
+      jsonData.map((data:any)=>{
+
+        (function(delay) {
+          var start = new Date().getTime();
+          while (new Date().getTime() < start + delay);
+      })(500)  
+
+        let service = null;
+        if(dataType == 'company'){
+          service = this.companyService.addCompanies(data);
+        } else if(dataType == 'stock'){
+          service = this.stockPriceService.addStockPrices(data);
+        }
+  
+        service.subscribe((res:any)=>{
+          console.log(res);
+        }, err=>{
+          console.log(err);
+        })
+      })
+
     });
   }
 
@@ -53,4 +77,6 @@ export class ExcelUploaderComponent implements OnInit {
     cb(jsonData);
   }
 
+
+  
 }

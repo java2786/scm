@@ -3,7 +3,7 @@
 <h2>Line Chart</h2>
 <div>
     <select (change)="onChangeCompany($event.target.value)">
-        <option>Select Company</option>
+        <option *ngIf="selectedCompany == null">Select Company</option>
         <option *ngFor="let companyCode of companyCodes">{{companyCode}}</option>
     </select>
   </div>

@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "coverage": "nyc --all --reporter=html npm run test",
     "json-server": "node_modules/.bin/json-server --watch apis/stock-market.json"
   },
   "private": true,

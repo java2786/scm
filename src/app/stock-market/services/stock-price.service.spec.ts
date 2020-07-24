@@ -11,8 +11,10 @@ describe('StockPriceService', () => {
       RouterTestingModule.withRoutes([])]
   }));
 
+ describe("boundary", ()=>{
   it('should be created', () => {
     const service: StockPriceService = TestBed.get(StockPriceService);
     expect(service).toBeTruthy();
   });
+ })
 });

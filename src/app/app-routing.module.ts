@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "login", component: LoginComponent},
   {path: "register", component: RegisterComponent},
+  // {path: 'stock-market', loadChildren: './stock-market/stock-market.module#StockMarketModule'},
   {path: 'stock-market', loadChildren: './stock-market/stock-market.module#StockMarketModule', canActivate: [LoginGuard]},
   {path: 'admin', loadChildren: './admin/admin.module#AdminModule', canActivate: [LoginGuard]},
   { path: '', redirectTo: 'home', pathMatch: 'full' }

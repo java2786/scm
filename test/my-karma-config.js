@@ -30,6 +30,8 @@ var WriterReporter = function (baseReporterDecorator, config, logger, helper, fo
     this.onRunComplete = function (browsers, results) {
         // write xml
         fs.writeFileSync(outputFiles.xml, xml.toString({ pretty: true }));
+        xml = null;
+        xml = xmlBuilder.create('test-cases');
     };
 
     this.onBrowserStart = function (browser) {

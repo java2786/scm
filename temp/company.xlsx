@@ -1,5 +1,5 @@
-id,companyName,ceo,turnover,boardDirectors,stockExchange,sectorCode,stockCode,brief
-1,Company 1,Ceo 1,12345,"Ramesh, Suresh, Mahesh",NSE,Telecom,,some description 1
-2,Company 2,Ceo 2,12346,"Ramesh, Suresh, Mahesh",NYSE,Banks,,some description 2
-3,Company 3,Ceo 3,12347,"Ramesh, Suresh, Mahesh",BSE,Real Estate,,some description 3
-4,Company 4,Ceo 4,12348,"Ramesh, Suresh, Mahesh",NSE,Chemicals,,some description 4
+companyName,ceo,turnover,boardDirectors,stockExchange,sectorCode,stockCode,brief
+Company 1,Ceo 1,12345,"Ramesh, Suresh, Mahesh",NSE,Telecom,,some description 1
+Company 2,Ceo 2,12346,"Ramesh, Suresh, Mahesh",NYSE,Banks,,some description 2
+Company 3,Ceo 3,12347,"Ramesh, Suresh, Mahesh",BSE,Real Estate,,some description 3
+Company 4,Ceo 4,12348,"Ramesh, Suresh, Mahesh",NSE,Chemicals,,some description 4

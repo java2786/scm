@@ -27,5 +27,8 @@ export class CompanyService {
     return this.http.put(`/companies/${id}`,company).pipe();
   }
 
+  addCompanies(companies: Company[]): Observable<Boolean> {
+    return this.http.post('/companies',companies).pipe();
+  }
 
 }

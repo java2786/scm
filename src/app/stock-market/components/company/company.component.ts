@@ -23,7 +23,7 @@ import {
   FormBuilder,
   FormArray
   } from "@angular/forms";
-  import { Observable } from 'rxjs';
+  // import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-company',
@@ -54,7 +54,6 @@ export class CompanyComponent implements OnInit {
   companyForm: FormGroup;
 
   constructor(
-    private loadingService: LoadingService,
     private exchangeService: StockExchangeService,
     private sectorService: SectorService,
     private companyService: CompanyService,
@@ -104,18 +103,23 @@ export class CompanyComponent implements OnInit {
         }
       );
   
+      this.findAllCompanies();
+  
+    }
+
+    findAllCompanies(){
       this.companyService.getAllCompanies().subscribe(
         data => {
           this.companies = data;
           console.log("comapnies->", this.companies);
         }
       );
-  
     }
 
     submitForm(){
-      console.log(this.id);
-      if(this.id > 0){
+      console.log(this.company.id);
+
+      if(this.company.id > 0){
         this.updateCompany();
       } else {
         this.addCompany();
@@ -126,11 +130,13 @@ export class CompanyComponent implements OnInit {
       console.log(this.companyForm.value);
 
 
-      this.companyService.updateCompany(this.companyForm.value, this.id)
+      this.companyService.updateCompany(this.companyForm.value, this.company.id)
       .subscribe(res => {
           console.log(res);
           this.companyForm.reset();
-          this.router.navigate(["/stock-market/stock-data/company"]);
+          this.findAllCompanies();
+
+          // this.router.navigate(["/stock-market/stock-data/company"]);
         }, err=>{
           console.log(err);
         }
@@ -146,6 +152,8 @@ export class CompanyComponent implements OnInit {
       .subscribe(res => {
           console.log(res);
           this.companyForm.reset();
+          this.findAllCompanies();
+
         }, err=>{
           console.log(err);
         }

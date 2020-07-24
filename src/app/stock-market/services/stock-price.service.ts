@@ -19,8 +19,12 @@ export class StockPriceService {
     return this.http.get(url).pipe();
   }
 
-  addStockPrice(stockExchange: StockPrice): Observable<Boolean> {
-    return this.http.post('/stock-prices',stockExchange).pipe();
+  addStockPrice(stockPrice: StockPrice): Observable<Boolean> {
+    return this.http.post('/stock-prices',stockPrice).pipe();
+  }
+
+  addStockPrices(stockPrices: StockPrice[]): Observable<Boolean> {
+    return this.http.post('/stock-prices',stockPrices).pipe();
   }
 
 

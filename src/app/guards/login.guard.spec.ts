@@ -16,7 +16,10 @@ describe('LoginGuard', () => {
     });
   });
 
-  it('should create', inject([LoginGuard], (guard: LoginGuard) => {
-    expect(guard).toBeTruthy();
-  }));
+  describe('boundary', ()=>{
+    
+    it('should create', inject([LoginGuard], (guard: LoginGuard) => {
+      expect(guard).toBeTruthy();
+    }));
+  })
 });

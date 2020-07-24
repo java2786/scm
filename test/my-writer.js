@@ -21,7 +21,7 @@ module.exports = {
 
         xml.ele('cases', {"xmlns:java": "http://java.sun.com", "xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance", "xsi:type":"java:com.assessment.data.TestCase"})
         // xml.ele('cases')
-        .ele('test-case-type', capitalize(testCaseType=='business'?"functional":testCaseType)).up()
+        .ele('test-case-type', capitalize(testCaseType=='business'?"functional":testCaseType=='exception'?"Exception":"Boundary")).up()
         .ele('expected-ouput', true).up()
         .ele('name', camelCase(result.fullName.trim())).up()
         .ele('weight', 2).up()
